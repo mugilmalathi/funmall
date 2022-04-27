@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Tickets Here</title>
+    <style>
+        body{
+            background-color: #f2d388;
+        }
+        h1{
+            text-align: center;
+            padding-top: 50px;
+        }
+        #tb-div{
+            border: 1px solid black;
+            width: 20%;
+            height: 300px;
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 10px;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            padding: 20px 20px 20px 20px;
+            margin-left: 60px;
+            border-radius: 50px;
+        }
+        input{
+            width: 70px;
+            height: 70px;
+            border: 1px solid black;
+            background-color: #f2d388;
+            color: black;
+            font-weight: bolder;
+            font-size: xx-large;
+            margin-left: 90px;
+        }
+        button{
+            width: 70px;
+            height: 70px;
+            border: 1px solid #f2d388;
+            background-color: #000;
+            color: #f2d388;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        button:hover{
+            border: 1px solid #000;
+            background-color: #f2d388;
+            color: #000;
+        }
+        #submit{
+            background-color: #f2d388;
+            border: 1px solid black;
+            width: 80px;
+            height: 35px;
+            color: #000;
+            font-size: small;
+            font-weight: bolder;
+            margin-top: 15px;
+        }
+        #submit:hover{
+            border: 1px solid #000;
+            background-color: #000;
+            color: #f2d388;
+        }
+        #print{
+            display: flex;
+            border: 1px solid black;
+            width: 60%;
+            height: 70px;
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 50px;
+        }#print > div:nth-child(1){
+            width:80%;
+            height: 100%;
+            text-align: center;
+        }
+        #print > div:nth-child(2){
+            width: 20%;
+            height: 100%;
+        }
+        /* popup */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #f2d388;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    margin: auto;
+    height: 300px;
+    color: white;
+    text-align: center;
+  }
+  .modal-content > img{
+      width: 150px;
+      height: 150px;
+      margin-right: 70px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #addmoney{
+    background-color: #f2d388;
+            border: 1px solid black;
+            width: 120px;
+            height: 35px;
+            color: #000;
+            font-size: small;
+            font-weight: bolder;
+            margin-top: 15px;
+  }
+  #addmoney:hover{
+    border: 1px solid #000;
+            background-color: #000;
+            color: #f2d388;
+  }
+  h4{
+      text-align: center;
+      color: black;
+  }
+    </style>
+</head>
+<body>
+    <div id="tb">
+        <h1>Welcome to IMAX Cinemas</h1>
+
+        <div id="tb-div">
+            <img id="ticket" src="https://www.infomoney.com.br/wp-content/uploads/2019/06/pipoca-cinema.jpg?fit=900%2C601&quality=50&strip=all" alt="">
+            <br>
+            <input type="number" name="" id="ticket-input">
+            <button id="click">O</button>
+        </div>
+
+        <div id="print">
+            <div><h2 id="msg"></h2></div>
+            <div><button id="submit">print</button></div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h4 id="good"></h4>
+              <img src="https://media.istockphoto.com/vectors/movie-tickets-vector-cinema-ticket-design-vector-id1177049680?k=20&m=1177049680&s=612x612&w=0&h=u4BEM-N3CGnUv5uKWlUN1hG6AIeLiH59E1ZKbyfv_J0=" alt="">
+              <br>
+              <button id="addmoney" onclick="addmoney()">Cinema</button>
+            </div>
+          </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+
+document.getElementById('click').addEventListener('click', showGif)
+
+
+    function showGif() {
+
+            var message = document.getElementById('msg');
+            var popup = document.getElementById('good')
+            var n = document.getElementById('ticket-input').value;
+            var ticket_count = document.getElementById("ticket");
+
+            if (n == 1 || n == 2 || n == 3) {
+                ticket_count.src = "https://i.pinimg.com/originals/33/bb/26/33bb26b02734eb489379762e6fc03431.gif"
+                message.innerText = `Your Booked ${n} Tickets..!`
+                popup.innerText = `Your ${n} Tickets. HavFun..!`
+            } else if (n == 4 || n == 5 || n == 6) {
+                ticket_count.src = "https://assets.materialup.com/uploads/36a6633d-fbf9-45dc-b87e-b16e0e0175b6/preview.gif"
+                message.innerText = `Your Booked ${n} Tickets..!`
+                popup.innerText = `Your ${n} Tickets. HavFun..!`
+            } else if (n == 6 || n == 7 || n == 8 || n == 9 || n == 10) {
+                ticket_count.src = "https://i.pinimg.com/originals/3d/ad/0e/3dad0e1d66a63eb08934b91f5149d392.gif"
+                message.innerText = `Your Booked ${n} Tickets..!`
+                popup.innerText = `Your ${n} Tickets. HavFun..!`
+            } else if(n > 10 || n == 0){
+                ticket_count.src = "https://media4.giphy.com/media/fV8iuSEwLQ6005diSh/giphy.gif"
+                message.innerText = "Sorry You cannot Book More than 10 Tickets..!"
+                popup.innerText = `Sorry No more Tickets Booked..!`
+            }
+        }
+
+
+
+
+
+        var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("submit");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+document.getElementById('addmoney').addEventListener('click', function(){
+
+    window.location.href = "cinema.html"
+})
+</script>

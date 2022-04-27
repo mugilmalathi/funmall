@@ -1,0 +1,227 @@
+/* Shadow into light font */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Shadows Into Light', cursive;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    background: #a7d2cb;
+}
+.container{
+    margin-top: 200px;
+    position: relative;
+    width: 1100px;
+    height: 200px;
+}
+.container .card{
+    position: absolute;
+    top: calc(50% - 200px);
+    left: 50%;
+    transform: translate(-50%,calc(100px * var(--i))) rotate(40deg) skew(-20deg, -10deg);
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 25px 25px 100px rgba(0,0,0,0.2);
+    z-index: calc(-1 * var(--i));
+    transition: 0.5s;
+}
+.container .card:nth-child(1){
+    opacity: 1;
+}
+.container .card:nth-child(2){
+    opacity: 0.8;
+}
+.container .card:nth-child(3){
+    opacity: 0.6;
+}
+.container:hover .card{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: 1;
+   opacity: 1;
+   box-shadow: 0px 25px 50px rgba(0,0,0,0.2);
+   transform: translate(calc(-50% + calc(350px * var(--i))), -50%) rotate(0deg) skew(0deg,0deg);
+}
+.container .card .content{
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(50px);
+    padding: 25px;
+    text-align: center;
+}
+.container:hover .card .content{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: calc(0.2s * var(--j));
+}
+#navbar{
+    margin-top: 20px;
+    width: 100%;
+    height: 70px;
+    border: 1px solid white;
+    display: flex;
+    border-radius: 10px;
+}
+#navbar-head{
+    color: #fff;
+    padding-left: 50px;
+    padding-top: 10px;
+    letter-spacing: 5px;
+}
+#navbar-head>span{
+    color:  #fff;
+    font-size: 20px;
+}
+#card1{
+    background-color: #f2d388;
+    border-radius: 20px;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#card2{
+    background-color: #c98474;
+    border-radius: 20px;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#card3{
+    background-color: #874c62;
+    border-radius: 20px;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#card1:hover{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;}
+#card2:hover{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;}
+#card3:hover{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;}
+#navbar-button{
+    width: 80px;
+    height: 35px;
+    margin-top: 15px;
+    border: 1px solid white;
+    background-color: #a7d2cb;
+    color: white;
+    font-size: medium;
+    font-weight: bolder;
+    margin-left: 50px;
+    cursor: pointer;
+}
+#money{
+    width: 80px;
+    height: 35px;
+    margin-top: 15px;
+    border: 1px solid white;
+    background-color: #a7d2cb;
+    color: white;
+    font-size: medium;
+    font-weight: bolder;
+    margin-left: 650px;
+    cursor: pointer;
+}
+#navbar-button:hover{
+    border: 1px solid #a7d2cb;
+    background-color: white;
+    color: #a7d2cb;
+}
+#money:hover{
+    border: 1px solid #a7d2cb;
+    background-color: white;
+    color: #a7d2cb;
+}
+#welcome{
+    color: white;
+    padding-top: 30px;
+    padding-left: 20px;
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 5px;
+}
+
+/* popup */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #a7d2cb;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 200px;
+    margin-left: 1000px;
+    height: 200px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #addmoney{
+      margin-top: 30px;
+      width: 80px;
+      height: 30px;
+      border: 1px solid white;
+      background-color: #a7d2cb;
+      color: #fff;
+      font-size: medium;
+      font-weight: bold;
+  }
+  #addmoney:hover{
+      background-color: white;
+      color: #a7d2cb;
+  }
+  #wallet{
+      margin-top: 20px;
+      border: 1px solid white;
+      height: 30px;
+      width: 150px;
+      border-radius: 5px;
+      padding-left: 20px;
+      color: #a7d2cb;
+  }
+  #showWallet{
+      color: white;
+      letter-spacing: 5px;
+      padding-left: 500px;
+      padding-top: 30px;
+  }

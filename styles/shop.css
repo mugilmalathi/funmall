@@ -1,0 +1,113 @@
+/* Shadow into light font */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+body{
+    margin: 0;
+}
+#container{
+    width: 100%;
+    height: 1200px;
+    position: absolute;
+    background-color: #874c62;
+}
+
+#navbar{
+    width: 60%;
+    height: 70px;
+    border: 1px solid white;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+    display: flex;
+    font-family: 'Shadows Into Light', cursive;
+}
+#navbar-head{
+    color: white;
+    padding-left: 30px;
+    padding-top: 3px;
+    letter-spacing: 5px;
+}
+#navbar-button1{
+    width: 80px;
+    height: 35px;
+    margin-top: 15px;
+    border: 1px solid white;
+    background-color: #874c62;
+    color: white;
+    font-size: medium;
+    font-weight: bolder;
+    margin-left: 50px;
+    cursor: pointer;
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 5px;
+}
+#navbar-button2{
+    width: 80px;
+    height: 35px;
+    margin-top: 15px;
+    border: 1px solid white;
+    background-color: #874c62;
+    color: white;
+    font-size: medium;
+    font-weight: bolder;
+    margin-left: 30px;
+    cursor: pointer;
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 5px;
+}
+#navbar-button3{
+    width: 90px;
+    height: 35px;
+    margin-top: 15px;
+    border: 1px solid white;
+    background-color: #874c62;
+    color: white;
+    font-size: medium;
+    font-weight: bolder;
+    margin-left: 30px;
+    cursor: pointer;
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 3px;
+}
+#navbar-search-but{
+    width: 80px;
+    height: 35px;
+    margin-top: 15px;
+    border: 1px solid white;
+    background-color: #874c62;
+    color: white;
+    font-size: medium;
+    font-weight: bolder;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 3px;
+}
+#navbar-search{
+    width: 250px;
+    height: 30px;
+    margin-top: 13px;
+    border: 1px solid #874c62;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+#navbar-button1:hover{
+    border: 1px solid #874c62;
+    background-color: white;
+    color: #874c62;
+}
+#navbar-button2:hover{
+    border: 1px solid #874c62;
+    background-color: white;
+    color: #874c62;
+}
+#navbar-button3:hover{
+    border: 1px solid #874c62;
+    background-color: white;
+    color: #874c62;
+}
+#navbar-search-but{
+    border: 1px solid #874c62;
+    background-color: white;
+    color: #874c62;
+}

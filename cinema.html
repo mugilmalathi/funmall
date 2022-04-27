@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/cinema.css">
+    <title>Book Your Tickets</title>
+</head>
+<body>
+    <div id="container">
+
+        <div id="navbar">
+            <h2 id="navbar-head">Fun mall</h2>
+            <input oninput="mainCinema()" id="navbar-search" type="text" name="">
+            <a href="./index.html"><button id="navbar-button1">Home</button></a>
+            <a href="./food.html"><button id="navbar-button2">Food</button></a>
+            <a href="./shop.html"><button id="navbar-button3">Shopping</button></a>
+        </div>
+
+        <div style="display: flex;">
+            <h4 id="welcome">Welcome to the IMax Cinemas</h4>
+            <h4 id="showWallet"></h4>
+        </div>
+
+    <!-- Slider movie images     -->
+
+    <div>
+        <div class="carousel">
+          <ul class="slides">
+            <input type="radio" name="radio-buttons" id="img-1" checked />
+            <li class="slide-container">
+              <div class="slide-image">
+                <img id="slider-img" src="https://static.toiimg.com/photo/90612493.jpeg">
+              </div>
+              <div class="carousel-controls">
+                <label for="img-3" class="prev-slide">
+                  <span>&lsaquo;</span>
+                </label>
+                <label for="img-2" class="next-slide">
+                  <span>&rsaquo;</span>
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-buttons" id="img-2" />
+            <li class="slide-container">
+              <div class="slide-image">
+                <img id="slider-img" src="https://hindi.cdn.zeenews.com/hindi/sites/default/files/styles/zm_700x400/public/2021/07/08/867437-kgf.jpg?itok=JEvAEDXx">
+              </div>
+              <div class="carousel-controls">
+                <label for="img-1" class="prev-slide">
+                  <span>&lsaquo;</span>
+                </label>
+                <label for="img-3" class="next-slide">
+                  <span>&rsaquo;</span>
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-buttons" id="img-3" />
+            <li class="slide-container">
+              <div class="slide-image">
+                <img id="slider-img" src="https://i.ytimg.com/vi/lDVQojLPI4Y/maxresdefault.jpg">
+              </div>
+              <div class="carousel-controls">
+                <label for="img-2" class="prev-slide">
+                  <span>&lsaquo;</span>
+                </label>
+                <label for="img-1" class="next-slide">
+                  <span>&rsaquo;</span>
+                </label>
+              </div>
+            </li>
+            <div class="carousel-dots">
+              <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+              <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+              <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+
+
+ <!-- show cinemas        -->
+        <div id="showCinema">
+           
+
+            <div>
+                <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kaathu-vaakula-rendu-kaadhal-et00126822-14-04-2022-10-57-09.jpg" alt="">
+                <h4>KVRK</h4>
+                <p>2022</p>
+                <button>Book Tickets</button>
+            </div>
+
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/en/1/17/Doctor_Strange_in_the_Multiverse_of_Madness_poster.jpg" alt="">
+                <h4>Doctor Strange in the Multiverse of Madness</h4>
+                <p>2022</p>
+                <button>Book Tickets</button>
+            </div>
+
+            <div>
+                <img src="https://static.toiimg.com/photo/msid-90725677/90725677.jpg?71132" alt="">
+                <h4>KGF 2</h4>
+                <p>2022</p>
+                <button>Book Tickets</button>
+            </div>
+
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/b1/Beast_2022_poster.jpg" alt="">
+                <h4>Beast</h4>
+                <p>2022</p>
+                <button>Book Tickets</button>
+            </div>
+
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg" alt="">
+                <h4>RRR</h4>
+                <p>2022</p>
+                <button>Book Tickets</button>
+            </div>
+
+            <div>
+                <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/large/fantastic-beasts-the-secrets-of-dumbledore-et00326085-06-04-2022-02-27-39.jpg" alt="">
+                <h4>Fantastic Beasts: The Secrets of Dumbledore</h4>
+                <p>2022</p>
+                <button>Book Tickets</button>
+            </div>
+
+            <div>
+                <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/jersey-et00118049-11-04-2022-12-53-49.jpg" alt="">
+                <h4>Jersey</h4>
+                <p>2022</p>
+                <button>Book Tickets</button>
+            </div>
+
+            <div>
+                <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/large/acharya-et00131903-24-08-2020-05-02-55.jpg" alt="">
+                <h4>Acharya</h4>
+                <p>2022</p>
+                <button>Book Tickets</button>
+            </div>
+
+            <div>
+                <img src="https://m.media-amazon.com/images/M/MV5BODk5YTk5NWQtNjU1Zi00MGMyLTgxNGYtZjhkZWRhNGZmNDRmXkEyXkFqcGdeQXVyNzA0NjA1NDI@._V1_QL75_UY281_CR4,0,190,281_.jpg" alt="">
+                <h4>Hostel</h4>
+                <p>2022</p>
+                <button>Book Tickets</button>
+            </div>
+
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Sonic_the_Hedgehog_film_poster.jpg/220px-Sonic_the_Hedgehog_film_poster.jpg" alt="">
+                <h4>Sonic the Hedgehog 2</h4>
+                <p>2022</p>
+                <button>Book Tickets</button>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script src="./scripts/cinema.js"></script>
