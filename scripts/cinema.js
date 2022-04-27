@@ -35,6 +35,7 @@ async function searchCinema(){
 
                 let year = document.createElement('p');
                 year.innerText = e.Year;
+                
     
                 let button = document.createElement('button');
                 button.innerText = "Book Tickets";

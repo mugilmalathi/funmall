@@ -154,12 +154,15 @@
 <body>
     <div id="tb">
         <h1>Welcome to IMAX Cinemas</h1>
+        <h4 style="color: teal; font-weight: bold;">Cost per Ticket is : Rs.120</h4>
+        <h4 id="showWallet"></h4>
+        
 
         <div id="tb-div">
             <img id="ticket" src="https://www.infomoney.com.br/wp-content/uploads/2019/06/pipoca-cinema.jpg?fit=900%2C601&quality=50&strip=all" alt="">
             <br>
             <input type="number" name="" id="ticket-input">
-            <button id="click">O</button>
+            <button id="click">M</button>
         </div>
 
         <div id="print">
@@ -184,12 +187,16 @@
 
 <script>
 
+    var amount = JSON.parse(localStorage.getItem('amount'));
+    var wal = document.getElementById('showWallet');
+    wal.innerText = "Your Wallet Amount is:    " + "Rs." + amount;
+
 document.getElementById('click').addEventListener('click', showGif)
 
 
     function showGif() {
 
-            var message = document.getElementById('msg');
+        var message = document.getElementById('msg');
             var popup = document.getElementById('good')
             var n = document.getElementById('ticket-input').value;
             var ticket_count = document.getElementById("ticket");
@@ -211,13 +218,32 @@ document.getElementById('click').addEventListener('click', showGif)
                 message.innerText = "Sorry You cannot Book More than 10 Tickets..!"
                 popup.innerText = `Sorry No more Tickets Booked..!`
             }
-        }
+
+
+           if(n<=10){
+            var amount = JSON.parse(localStorage.getItem('amount'));
+            if(amount == 0){
+                popup("Insufficient Balance Please Add money to your wallet..!")
+            }else{
+                var wal = document.getElementById('showWallet');
+                var q = +(amount)- (+(n*120))
+                localStorage.setItem('amount', JSON.stringify(q))
+                wal.innerText = "Your Wallet Amount is:    " + "Rs." + amount;
+            }
+            
+           }
+            
+        
+    }
+
+    
 
 
 
 
 
-        var modal = document.getElementById("myModal");
+
+var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("submit");
@@ -248,4 +274,7 @@ document.getElementById('addmoney').addEventListener('click', function(){
 
     window.location.href = "cinema.html"
 })
+
+
+
 </script>

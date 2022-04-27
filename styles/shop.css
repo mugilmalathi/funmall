@@ -1,6 +1,4 @@
-/* Shadow into light font */
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body{
     margin: 0;
 }
@@ -19,7 +17,7 @@ body{
     border-radius: 10px;
     margin-top: 30px;
     display: flex;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Poppins', sans-serif;
 }
 #navbar-head{
     color: white;
@@ -34,25 +32,25 @@ body{
     border: 1px solid white;
     background-color: #874c62;
     color: white;
-    font-size: medium;
+    font-size: small;
     font-weight: bolder;
-    margin-left: 50px;
+    margin-left: 30px;
     cursor: pointer;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 5px;
 }
 #navbar-button2{
-    width: 80px;
+    width: 90px;
     height: 35px;
     margin-top: 15px;
     border: 1px solid white;
     background-color: #874c62;
     color: white;
-    font-size: medium;
+    font-size: small;
     font-weight: bolder;
     margin-left: 30px;
     cursor: pointer;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 5px;
 }
 #navbar-button3{
@@ -62,11 +60,11 @@ body{
     border: 1px solid white;
     background-color: #874c62;
     color: white;
-    font-size: medium;
+    font-size: small;
     font-weight: bolder;
     margin-left: 30px;
     cursor: pointer;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 3px;
 }
 #navbar-search-but{
@@ -80,7 +78,7 @@ body{
     font-weight: bolder;
     margin-left: 10px;
     cursor: pointer;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 3px;
 }
 #navbar-search{
@@ -110,4 +108,77 @@ body{
     border: 1px solid #874c62;
     background-color: white;
     color: #874c62;
+}
+
+
+
+#showitem{
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px
+}
+#showitem>div{
+    border: 1px solid white;
+    text-align: center;
+    /* height: 320px; */
+    color: gray;
+    background-color: #fff;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 17px;
+    padding: 15px 15px 0px 15px; /*top right bottom left*/
+}
+#showitem>div>img{
+
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+}
+#showitem>div>button{
+    width: 150px;
+    height: 35px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: teal;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+#showitem>div>h4{
+    letter-spacing: 2px;
+}
+#showitem>div>button:hover{
+    background-color: white;
+    color: #874c62;
+    border: 1px solid #874c62;
+}
+
+.cart{
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: x-large;
+}
+.cart:hover{
+    color: rgb(202, 195, 195);
+}
+#round{
+    width: 25px;
+    height: 25px;
+    border: 1px solid #874c62;
+    background-color: white;
+    color: rgb(55, 55, 55);
+    border-radius: 50%;
+    margin-left: -10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: small;
 }

@@ -68,9 +68,6 @@ async function searchfood(){
 
 var arr = JSON.parse(localStorage.getItem('ls')) || []
 
-
-
-
 function orderfood(e){
 
     localStorage.setItem('ls', JSON.stringify(e))

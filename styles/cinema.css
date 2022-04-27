@@ -214,7 +214,7 @@ ul.slides input {
     height: 100%;
     top: 0;
     opacity: 0;
-    transition: all .7s ease-in-out;
+    transition: all 3s ease-in-out;
 }   
 
 .slide-image img {
@@ -240,7 +240,7 @@ ul.slides input {
     position: absolute;
     padding: 0 20px;
     opacity: 0;
-    transition: opacity .2s;
+    transition: opacity 3s;
     cursor: pointer;
 }
 
@@ -286,7 +286,7 @@ ul.slides input {
 input:checked + .slide-container .slide-image {
     opacity: 1;
     transform: scale(1);
-    transition: opacity 1s ease-in-out;
+    transition: opacity 3s ease-in-out;
 }
 
 input:checked + .slide-container .carousel-controls label {

@@ -29,12 +29,12 @@ right3.append(type);
 
 const right4 = document.createElement('div')
 const runtime = document.createElement('h4');
-runtime.innerText = "Runtime is:  ";
+runtime.innerText = "Runtime is:  " + Math.floor(Math.random() * (3 - 2 + 1) + 2) + "Hrs" + Math.floor(Math.random() * (40 - 10 + 1) + 10) + "Minutes";
 right4.append(runtime);
 
 const right5 = document.createElement('div')
 const imdb = document.createElement('h4');
-imdb.innerText = "IMBD Rating:  ";
+imdb.innerText = "IMBD Rating:  " + Math.floor(Math.random() * (10 - 4 + 1) + 4);
 right5.append(imdb);
 
 const right6 = document.createElement('div')
