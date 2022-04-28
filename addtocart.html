@@ -4,13 +4,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/shop.css">
     <title>Add to cart</title>
+    <style>
+        h1{
+            text-align: center;
+            color: white;
+            padding-bottom: 50px;
+        }
+        img{
+            width: 80px;
+            height: 80px;
+            padding: 20px 20px 20px 20px;
+        }
+        body{
+            background-color: #874c62;
+        }
+        #showitem{
+            width: 60%;
+            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+            margin: auto;
+            display: flex;
+        }
+        #left{
+            width: 60%;
+        }
+        #right{
+            width: 40%;
+            height: 200px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            margin-top: 50px;
+            border-radius: 10px;
+            background-color: white;
+        }
+        #maindiv{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            background-color: white;
+        }
+        #div1{
+            width: 80%;
+            display: flex;
+        }
+        #div2{
+            width: 20%;
+        }
+        h4{
+            color: #874c62;
+            padding-top: 25px;
+            padding-left: 50px;
+        }
+        p{
+            color: #874c62;
+            padding-top: 31px;
+            padding-left: 50px;
+        }
+        button{
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid white;
+            background-color: #874c62;
+            color: white;
+            font-size: x-large;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-left: 30px;
+        }
+        button:hover{
+            background-color: white;
+            color: #874c62;
+            border: 1px solid #874c62;
+        }
+        #pay{
+            margin-left: 140px;
+            width: 100px;
+            height: 30px;
+            font-size: medium;
+        }
+        #total{
+            padding-left: 100px;
+            font-size: large;
+            font-weight: bold;
+        }
+        #showWallet{
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1>Add to cart</h1>
+    <h4 id="showWallet"></h4>
 
-    <div id="showitem"></div>
+    <div id="showitem">
+        <div id="left"></div>
+        <div id="right">
+            <h4 id="total"></h4>
+            <button id="pay" onclick="payment()">Pay Now</button>
+        </div>
+    </div>
+
+    
 </body>
 </html>
 
@@ -18,11 +117,14 @@
 
     var arr = JSON.parse(localStorage.getItem('addtocart'));
 
-    console.log(arr)
-
         arr.map((e, i) => {
 
             let div = document.createElement("div");
+            div.setAttribute("id", "maindiv")
+            let div1 = document.createElement("div");
+            div1.setAttribute("id", "div1")
+            let div2 = document.createElement("div");
+            div2.setAttribute("id", "div2")
 
             let img = document.createElement("img");
             img.src = e.image;
@@ -31,17 +133,18 @@
             title.innerText = e.name;
 
             let amount = document.createElement("p");
-            amount.innerText = e.price;
+            amount.innerText = "Rs." +`${e.price}`;
 
             let button = document.createElement('button');
-            button.innerText = "Remove"
+            button.innerText = "✘"
             button.onclick = () => {
                 removecart(e, i)
             }
 
-            div.append(img, title, amount, button);
-
-            document.getElementById("showitem").append(div);
+            div1.append(img, title, amount);
+            div2.append(button)
+            div.append(div1, div2)
+            document.getElementById("left").append(div)
 
         })
 
@@ -52,4 +155,46 @@
             localStorage.setItem('addtocart', JSON.stringify(arr))
             window.location.reload();
         }
+
+        var price = JSON.parse(localStorage.getItem('addtocart'));
+
+        var sum = 0;
+
+        price.map((e)=>{
+
+            sum += e.price;
+        })
+        
+        document.getElementById("total").innerText = "Total Amount: " + "Rs. " + sum;
+
+            
+
+            var amount = JSON.parse(localStorage.getItem('amount'))
+            console.log(amount)
+
+            var x = amount - sum
+            document.getElementById('showWallet').innerText = "Your Wallet Amount is: " + "Rs." + " " + x;
+            console.log(x)
+
+            localStorage.setItem('amount', JSON.stringify(x))
+
+            function payment(){
+                
+                setTimeout(function(){
+                    alert(`You Paid ${sum}`)
+                }, 2000)
+                setTimeout(function(){
+                    alert("Your Order Successfully Placed..!")
+                }, 3000)
+                setTimeout(function(){
+                    alert("Your Order is On the Way..!")
+                }, 3000)
+                setTimeout(function(){
+                    alert("Order Delivered. Thanks for Purchasing..!")
+                    window.location.href = "shop.html";
+                }, 3000)
+            }
+
+
+
 </script>
