@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: monospace;
 }
 body{
     display: flex;
@@ -77,7 +77,6 @@ body{
     color: #fff;
     padding-left: 50px;
     padding-top: 10px;
-    letter-spacing: 5px;
 }
 #navbar-head>span{
     color:  #fff;
@@ -151,8 +150,7 @@ body{
     color: white;
     padding-top: 30px;
     padding-left: 20px;
-    font-family: 'Shadows Into Light', cursive;
-    letter-spacing: 5px;
+    font-family: monospace;
 }
 
 /* popup */
@@ -221,7 +219,6 @@ body{
   }
   #showWallet{
       color: white;
-      letter-spacing: 5px;
       padding-left: 500px;
       padding-top: 30px;
   }

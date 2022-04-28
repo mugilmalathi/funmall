@@ -19,13 +19,12 @@ body{
     border-radius: 10px;
     margin-top: 30px;
     display: flex;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: monospace;
 }
 #navbar-head{
     color: white;
     padding-left: 30px;
     padding-top: 3px;
-    letter-spacing: 5px;
 }
 #navbar-button1{
     width: 80px;
@@ -38,8 +37,7 @@ body{
     font-weight: bolder;
     margin-left: 50px;
     cursor: pointer;
-    font-family: 'Shadows Into Light', cursive;
-    letter-spacing: 5px;
+    font-family: monospace;
 }
 #navbar-button2{
     width: 80px;
@@ -52,8 +50,7 @@ body{
     font-weight: bolder;
     margin-left: 30px;
     cursor: pointer;
-    font-family: 'Shadows Into Light', cursive;
-    letter-spacing: 5px;
+    font-family: monospace;
 }
 #navbar-button3{
     width: 90px;
@@ -66,8 +63,7 @@ body{
     font-weight: bolder;
     margin-left: 30px;
     cursor: pointer;
-    font-family: 'Shadows Into Light', cursive;
-    letter-spacing: 3px;
+    font-family: monospace;
 }
 #navbar-search-but{
     width: 80px;
@@ -80,8 +76,7 @@ body{
     font-weight: bolder;
     margin-left: 10px;
     cursor: pointer;
-    font-family: 'Shadows Into Light', cursive;
-    letter-spacing: 3px;
+    font-family: monospace;
 }
 #navbar-search{
     width: 300px;
@@ -132,7 +127,7 @@ body{
     /* height: 320px; */
     color: white;
     border-radius: 5px;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: monospace;
     line-height: 17px;
     padding: 15px 15px 0px 15px; /*top right bottom left*/
 }
@@ -151,8 +146,7 @@ body{
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 20px;
-    font-family: 'Shadows Into Light', cursive;
-    letter-spacing: 5px;
+    font-family: monospace;
 }
 #showFood>div>h4{
     letter-spacing: 2px;

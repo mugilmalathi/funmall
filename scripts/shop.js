@@ -28,7 +28,7 @@ function appendItems(arr){
         title.innerText = e.name;
 
         let amount = document.createElement("p");
-        amount.innerText = e.price;
+        amount.innerText = "Rs." + `${e.price}`;
 
         let button = document.createElement('button');
         button.innerText = "Add to Cart"
