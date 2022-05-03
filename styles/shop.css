@@ -8,7 +8,12 @@ body{
     position: absolute;
     background-color: #874c62;
 }
-
+#logo{
+    margin-left: 10px;
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+}
 #navbar{
     width: 60%;
     height: 70px;
@@ -82,7 +87,7 @@ body{
     margin-top: 13px;
     border: 1px solid #874c62;
     border-radius: 5px;
-    margin-left: 50px;
+    margin-left: 30px;
 }
 #navbar-button1:hover{
     border: 1px solid #874c62;

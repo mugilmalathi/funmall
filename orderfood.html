@@ -61,6 +61,13 @@
         #showWallet{
             padding-top: 100px;
         }
+        /* #div1{
+            width: 300px;
+            height: 400px;
+            margin-top: 100px;
+            background-color: teal;
+            color: white;
+        } */
     </style>
 </head>
 <body>
@@ -125,15 +132,12 @@ var amount = JSON.parse(localStorage.getItem('amount'))
                 }
             }
 
-
-            let image = document.getElementById('image').append(img)
-            let title = document.getElementById('title').append(h4, price, button)
-
+            let image = document.getElementById('image').append(img);
+            let title = document.getElementById('title').append(h4, price, button);
 
                 var amount = JSON.parse(localStorage.getItem('amount'));
                 var wal = document.getElementById('showWallet');
 
                 wal.innerText = "Your Wallet Amount is:    " + "Rs." + amount; 
-
 
 </script>

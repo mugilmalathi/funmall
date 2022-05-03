@@ -169,31 +169,51 @@
 
             
 
+            // var amount = JSON.parse(localStorage.getItem('amount'))
+            // console.log(amount)
+
+            // var x = amount - sum
+            // document.getElementById('showWallet').innerText = "Your Wallet Amount is: " + "Rs." + " " + x;
+            // console.log(x)
+
+            // localStorage.setItem('amount', JSON.stringify(x))
+
             var amount = JSON.parse(localStorage.getItem('amount'))
-            console.log(amount)
-
-            var x = amount - sum
-            document.getElementById('showWallet').innerText = "Your Wallet Amount is: " + "Rs." + " " + x;
-            console.log(x)
-
-            localStorage.setItem('amount', JSON.stringify(x))
 
             function payment(){
+
+                
+                // console.log(amount)
+
+                var x = amount - sum
+                document.getElementById('showWallet').innerText = "Your Wallet Amount is: " + "Rs." + " " + x;
+                console.log(x)
+
+                localStorage.setItem('amount', JSON.stringify(x))
                 
                 setTimeout(function(){
                     alert(`You Paid ${sum}`)
                 }, 2000)
                 setTimeout(function(){
                     alert("Your Order Successfully Placed..!")
-                }, 3000)
+                }, 4000)
                 setTimeout(function(){
                     alert("Your Order is On the Way..!")
-                }, 3000)
+                }, 6000)
                 setTimeout(function(){
                     alert("Order Delivered. Thanks for Purchasing..!")
                     window.location.href = "shop.html";
-                }, 3000)
+                }, 8000)
+
+                price = 0;
+
             }
+
+            window.addEventListener("reload", function(){
+                var x = amount - sum
+                document.getElementById('showWallet').innerText = "Your Wallet Amount is: " + "Rs." + " " + x;
+                console.log(x)
+            })
 
 
 

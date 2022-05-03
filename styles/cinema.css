@@ -298,3 +298,11 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
 
 
 input:checked + .slide-container .nav label { display: block; }
+
+
+#logo{
+    margin-left: 20px;
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+}

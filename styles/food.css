@@ -10,7 +10,12 @@ body{
     background-color: #c98474;
     height: 4000px;
 }
-
+#logo{
+    margin-left: 20px;
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+}
 #navbar{
     width: 60%;
     height: 70px;
@@ -84,7 +89,7 @@ body{
     margin-top: 13px;
     border: 1px solid #c98474;
     border-radius: 5px;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 #navbar-button1:hover{
     border: 1px solid #c98474;

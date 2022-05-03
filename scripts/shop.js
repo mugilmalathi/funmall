@@ -1,10 +1,9 @@
 async function showItems(){
 
     try{
-        const res = await fetch("https://grocery-masai.herokuapp.com/items");
+        const res = await fetch("https://shop-funmall-db.herokuapp.com/shops");
         const data = await res.json();
-        const arr = data.data;
-        appendItems(arr)
+        appendItems(data)
         console.log(arr)
 
     }catch(err){

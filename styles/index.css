@@ -15,7 +15,10 @@ body{
     background: #a7d2cb;
 }
 #logo{
-    margin-left: 40px;
+    margin-left: 20px;
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
 }
 .container{
     margin-top: 200px;
